@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db:
+    image: postgres:9.6
+    ports:
+      - '0:5432'
+  web:
+    build: .
+    volumes:
+      - .:/manhwastore
+    ports:
+      - '4000:4000'
+    command: mix phoenix.server
+    links:
+      - db
