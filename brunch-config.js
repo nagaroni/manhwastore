@@ -20,7 +20,10 @@ exports.config = {
       // }
     },
     stylesheets: {
-      joinTo: "css/app.css",
+      joinTo: {
+        "css/app.css": /^web\/static\/css/,
+        "vendor/vendor.css": /^node_modules/
+      },
       order: {
         after: ["web/static/css/app.css"] // concat app.css last
       }
@@ -54,6 +57,11 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/]
+    },
+    sass: {
+      options: {
+        includePaths: ['node_modules/bulma']
+      }
     }
   },
 
@@ -64,6 +72,9 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    enabled: true,
+    styles:{
+      bulma: ['bulma/bulma.sass']
+    }
   }
 };

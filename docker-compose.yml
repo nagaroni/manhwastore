@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/manhwastore
     ports:
-      - '4000:4000'
-    command: mix phoenix.server
+      - '80:80'
+    command: 'mix phoenix.server'
     links:
       - db

@@ -5,8 +5,7 @@ RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
 RUN dpkg -i erlang-solutions_1.0_all.deb
 RUN apt-get update && apt-get install -y --force-yes libpq-dev curl git libqt4-webkit libqt4-dev \
 xvfb libjpeg-turbo8 vim nodejs postgresql-client esl-erlang elixir locales
-RUN rm -rf /var/lib/apt/lists/* localedef -i en_US -c -f UTF-8 \
--A /usr/share/locale/locale.alias en_US.UTF-8
+RUN rm -rf /var/lib/apt/lists/* && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 
 

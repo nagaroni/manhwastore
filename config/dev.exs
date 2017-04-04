@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :manhwastore, Manhwastore.Endpoint,
-  http: [port: 4000],
+  http: [port: 80],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -39,5 +39,5 @@ config :manhwastore, Manhwastore.Repo,
   username: "postgres",
   password: "postgres",
   database: "manhwastore_dev",
-  hostname: "localhost",
+  hostname: "db",
   pool_size: 10
