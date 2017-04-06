@@ -1,0 +1,28 @@
+<h2>Show supplier</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @supplier.name %>
+  </li>
+
+  <li>
+    <strong>Supplier code:</strong>
+    <%= @supplier.supplier_code %>
+  </li>
+
+  <li>
+    <strong>Cpf cnpj:</strong>
+    <%= @supplier.cpf_cnpj %>
+  </li>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @supplier.address_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: supplier_path(@conn, :edit, @supplier) %>
+<%= link "Back", to: supplier_path(@conn, :index) %>

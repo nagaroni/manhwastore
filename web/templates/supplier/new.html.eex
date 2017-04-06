@@ -1,0 +1,6 @@
+<h2>New supplier</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: supplier_path(@conn, :create) %>
+
+<%= link "Back", to: supplier_path(@conn, :index) %>

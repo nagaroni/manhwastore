@@ -1,0 +1,53 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :price, class: "control-label" %>
+    <%= number_input f, :price, step: "any", class: "form-control" %>
+    <%= error_tag f, :price %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :volume, class: "control-label" %>
+    <%= text_input f, :volume, class: "form-control" %>
+    <%= error_tag f, :volume %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :quantity, class: "control-label" %>
+    <%= number_input f, :quantity, class: "form-control" %>
+    <%= error_tag f, :quantity %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :image_url, class: "control-label" %>
+    <%= text_input f, :image_url, class: "form-control" %>
+    <%= error_tag f, :image_url %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :video_url, class: "control-label" %>
+    <%= text_input f, :video_url, class: "form-control" %>
+    <%= error_tag f, :video_url %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :download_url, class: "control-label" %>
+    <%= text_input f, :download_url, class: "form-control" %>
+    <%= error_tag f, :download_url %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

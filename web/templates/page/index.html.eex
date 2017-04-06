@@ -3,8 +3,8 @@
   <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
 </div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
+<div class="columns marketing">
+  <div class="column is-half">
     <h4>Resources</h4>
     <ul>
       <li>
@@ -19,7 +19,7 @@
     </ul>
   </div>
 
-  <div class="col-lg-6">
+  <div class="column is-half">
     <h4>Help</h4>
     <ul>
       <li>
@@ -32,5 +32,15 @@
         <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
       </li>
     </ul>
+    <%= for product <- @products do %>
+      <div class='card'>
+        <div class='card-content'>
+          <div class='media-content'>
+            <p class='title is-4'><%= product.title %></p>
+            <p class='subtitle is-6'><%= product.price %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

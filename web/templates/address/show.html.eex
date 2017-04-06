@@ -1,0 +1,48 @@
+<h2>Show address</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @address.name %>
+  </li>
+
+  <li>
+    <strong>Number:</strong>
+    <%= @address.number %>
+  </li>
+
+  <li>
+    <strong>State name:</strong>
+    <%= @address.state_name %>
+  </li>
+
+  <li>
+    <strong>City name:</strong>
+    <%= @address.city_name %>
+  </li>
+
+  <li>
+    <strong>State code:</strong>
+    <%= @address.state_code %>
+  </li>
+
+  <li>
+    <strong>Neighboorhood name:</strong>
+    <%= @address.neighboorhood_name %>
+  </li>
+
+  <li>
+    <strong>Neighborhood name:</strong>
+    <%= @address.neighborhood_name %>
+  </li>
+
+  <li>
+    <strong>Neighborhood code:</strong>
+    <%= @address.neighborhood_code %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: address_path(@conn, :edit, @address) %>
+<%= link "Back", to: address_path(@conn, :index) %>

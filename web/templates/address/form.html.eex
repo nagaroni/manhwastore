@@ -1,0 +1,59 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :number, class: "control-label" %>
+    <%= text_input f, :number, class: "form-control" %>
+    <%= error_tag f, :number %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :state_name, class: "control-label" %>
+    <%= text_input f, :state_name, class: "form-control" %>
+    <%= error_tag f, :state_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :city_name, class: "control-label" %>
+    <%= text_input f, :city_name, class: "form-control" %>
+    <%= error_tag f, :city_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :state_code, class: "control-label" %>
+    <%= text_input f, :state_code, class: "form-control" %>
+    <%= error_tag f, :state_code %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :neighboorhood_name, class: "control-label" %>
+    <%= text_input f, :neighboorhood_name, class: "form-control" %>
+    <%= error_tag f, :neighboorhood_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :neighborhood_name, class: "control-label" %>
+    <%= text_input f, :neighborhood_name, class: "form-control" %>
+    <%= error_tag f, :neighborhood_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :neighborhood_code, class: "control-label" %>
+    <%= text_input f, :neighborhood_code, class: "form-control" %>
+    <%= error_tag f, :neighborhood_code %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
