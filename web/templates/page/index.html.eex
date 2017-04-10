@@ -1,39 +1,12 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="columns marketing">
-  <div class="column is-half">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="column is-half">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-    <%= for product <- @products do %>
+<div class='columns'>
+  <%= for product <- @products do %>
+    <div class='column is-4'>
       <div class='card'>
+        <div class='card-image'>
+          <figure class='image is-1by1'>
+            <img src='/images/magi_capa.jpg' />
+          </figure>
+        </div>
         <div class='card-content'>
           <div class='media-content'>
             <p class='title is-4'><%= product.title %></p>
@@ -41,6 +14,41 @@
           </div>
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+    <div class='column is-4'>
+      <div class='card'>
+        <div class='card-image'>
+          <figure class='image is-1by1'>
+            <img src='/images/magi_capa.jpg' />
+          </figure>
+        </div>
+        <div class='card-content'>
+          <div class='media-content'>
+            <p class='title is-4'><%= product.title %></p>
+            <p class='subtitle is-6'><%= product.price %></p>
+          </div>
+        </div>
+        <div class='card-footer'>
+          <span class='icon'>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class='column is-4'>
+      <div class='card'>
+        <div class='card-image'>
+          <figure class='image is-1by1'>
+            <img src='/images/magi_capa.jpg' />
+          </figure>
+        </div>
+        <div class='card-content'>
+          <div class='media-content'>
+            <p class='title is-4'><%= product.title %></p>
+            <p class='subtitle is-6'><%= product.price %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
