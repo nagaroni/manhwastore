@@ -38,5 +38,6 @@ defmodule Manhwastore.Endpoint do
     key: "_manhwastore_key",
     signing_salt: "kz6YJpYF"
 
+  plug Corsica, origins: "*"
   plug Manhwastore.Router
 end

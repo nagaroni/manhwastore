@@ -19,8 +19,9 @@ defmodule Manhwastore.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Manhwastore do
-  #   pipe_through :api
-  # end
+  scope "/api", Manhwastore do
+    pipe_through :api
+
+    resources "/products", ProductController, only: [:index, :create, :show]
+  end
 end
