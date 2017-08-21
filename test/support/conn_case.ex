@@ -24,6 +24,7 @@ defmodule Manhwastore.ConnCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
+      import Product.Factory
 
       import Manhwastore.Router.Helpers
 

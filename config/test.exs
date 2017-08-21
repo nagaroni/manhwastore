@@ -15,5 +15,5 @@ config :manhwastore, Manhwastore.Repo,
   username: "postgres",
   password: "postgres",
   database: "manhwastore_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox
