@@ -22,6 +22,6 @@ defmodule Manhwastore.Router do
   scope "/api", Manhwastore do
     pipe_through :api
 
-    resources "/products", ProductController, only: [:index, :create, :show]
+    resources "/products", ProductController, only: [:index, :create, :show, :update]
   end
 end

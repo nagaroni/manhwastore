@@ -15,6 +15,18 @@ defmodule Manhwastore.ProductController do
     json(conn, %{product: product})
   end
 
+  def update(conn, %{"id" => id, "product" => attributes}) do
+    product = Product |> Repo.get(id)
+    product = Product.changeset(product, attributes)
+    
+    case Repo.update(product) do
+      {:ok, struct} ->
+        conn
+        |> put_status(201)
+        |> json(%{product: struct})
+    end
+  end
+
   def create(conn, params) do
     changeset = Product.changeset(%Product{}, params)
 

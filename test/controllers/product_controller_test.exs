@@ -46,6 +46,18 @@ defmodule Manhwastore.ProductControllerTest do
     assert json_response(conn, 422) == errors
   end
 
+  test "#update should patch an specific product" do
+    conn = build_conn()
+    product = insert(:product)
+    params = %{"product" => %{ "title" => "New title" }}
+
+    conn = put(conn, product_path(conn, :update, product.id), params)
+
+    response = json_response(conn, 201) 
+    %{ "product" => %{ "title" => title } } = response 
+    assert(title == "New title")
+  end
+
   test "#show renders an specific product" do
     conn = build_conn()
     product = insert(:product)
